@@ -1,0 +1,129 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="myProgressStyle" parent="android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/loading</item>
+    </style>
+
+    <style name="simple_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:background">@drawable/background_card</item>
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="my_edittext_style" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/reply_edit_bg</item>
+    </style>
+
+    <style name="drawerMenuButton">
+        <item name="android:textSize">@dimen/drawerTextSize</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:background">@drawable/btn_drawer_menu</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">50.0dip</item>
+        <item name="android:drawablePadding">8.0dip</item>
+    </style>
+
+    <style name="listViewMultiImageView">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_height">78dp</item>
+        <item name="android:layout_width">78dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="listViewRetweetMultiImageView">
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="listViewDetailMultiImageView">
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_height">94dp</item>
+        <item name="android:layout_width">94dp</item>
+        <item name="android:layout_margin">2.5dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="listViewDetailRetweetMultiImageView">
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_height">86dp</item>
+        <item name="android:layout_width">86dp</item>
+        <item name="android:layout_margin">2.5dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="MessageCouter">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">3.0dip</item>
+        <item name="android:paddingBottom">4.0dip</item>
+        <item name="android:shadowColor">#b0000000</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+
+    <style name="ProfileDetailText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#b0000000</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+
+    <style name="ProfileDetailText.Name" parent="@style/ProfileDetailText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ProfileDetailText.Follow" parent="@style/ProfileDetailText">
+        <item name="android:textColor">#ffe9eedd</item>
+    </style>
+
+    <style name="ProfileDetailText.Tab" parent="@style/ProfileDetailText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="mycheckboxstyle" parent="@*android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/setting_checkbox_selector</item>
+    </style>
+
+    <style name="myswitchstyle" parent="@*android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/setting_switch_selector</item>
+    </style>
+
+</resources>

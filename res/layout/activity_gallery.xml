@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/gallery_action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        android:background="@drawable/gallery_action_bar" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:background="@drawable/list_selector"
+            android:drawableLeft="@drawable/activity_back"
+            android:drawablePadding="1.0dip"
+            android:gravity="center_vertical"
+            android:text="查看图片"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/tv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.0dip"
+            android:text="1/1"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+    
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/iv_browse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="center" />
+
+    <RelativeLayout
+        android:id="@+id/gallery_tool_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_alignParentBottom="true"
+         android:visibility="visible"
+        android:background="@drawable/gallery_action_bar" >
+
+        <ImageView
+            android:id="@+id/clockwise"
+            android:layout_width="60.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/list_selector"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:src="@drawable/gallery_clockwise" />
+
+        <ImageView
+            android:id="@+id/anticlockwise"
+            android:layout_width="60.0dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/clockwise"
+            android:background="@drawable/list_selector"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:src="@drawable/gallery_anticlockwise" />
+
+        <ImageView
+            android:layout_width="60.0dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/anticlockwise"
+            android:background="@drawable/list_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/gallery_origenalpic"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="100.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:background="@drawable/list_selector"
+            android:drawableLeft="@drawable/gallery_save"
+            android:drawablePadding="9.0dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:text="保存"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

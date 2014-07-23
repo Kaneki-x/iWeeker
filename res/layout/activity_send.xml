@@ -1,0 +1,246 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/send_rl_actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/actionbar_bg" >
+
+        <RelativeLayout
+            android:id="@+id/send_rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/send_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/activity_back" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/send_btn_back"
+                android:background="@drawable/logo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sned_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/send_rl_back"
+            android:text="@string/write"
+            android:textColor="#200000"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/send_separate"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/sned_tv"
+            android:background="@drawable/button_separate" />
+
+        <RelativeLayout
+            android:id="@+id/send_rl_wb_send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/send_separate" >
+
+            <ImageView
+                android:id="@+id/send_iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/send_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/send_iv_send"
+                android:text="@string/send"
+                android:textColor="#200000"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_send_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_gray" >
+
+        <LinearLayout
+            android:id="@+id/ll_send_tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="5" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_send_camera"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:clickable="true"
+                    android:src="@drawable/photo_btn_bg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_send_trend"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:src="@drawable/topic_btn_bg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_send_at"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:src="@drawable/at_btn_bg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_send_emotion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:src="@drawable/weibo_detail_keyboard_button" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_send_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:src="@drawable/location_btn_bg" />
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rl_send_emotions"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@id/ll_send_tool"
+            android:background="@drawable/emotion_bg"
+            android:visibility="visible" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_send_emotions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="7dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/iv_send_emotion_indicator_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:background="@drawable/emotion_indicator_selected" />
+
+                <ImageView
+                    android:id="@+id/iv_send_emotion_indicator_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@drawable/emotion_indicator" />
+
+                <ImageView
+                    android:id="@+id/iv_send_emotion_indicator_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@drawable/emotion_indicator" />
+
+                <ImageView
+                    android:id="@+id/iv_send_emotion_indicator_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/emotion_indicator" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_sep"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/rl_send_tool"
+        android:background="#C2C2C2" />
+
+    <EditText
+        android:id="@+id/et_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_sep"
+        android:layout_below="@id/send_rl_actionbar"
+        android:textSize="20sp"
+        android:focusable="true"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="@string/send_hint" />
+
+</RelativeLayout>

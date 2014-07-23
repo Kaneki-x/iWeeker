@@ -1,0 +1,321 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_wb_detail_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/rl_action_bar" >
+
+    <RelativeLayout
+        android:id="@+id/rl_wb_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rl_wb_detail_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.bobo.iweeker.UI.RoundImageView
+                android:id="@+id/img_wb_detail_head"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/default_avatar" />
+
+            <LinearLayout
+                android:id="@+id/ll_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/img_wb_detail_head"
+                android:orientation="horizontal" >
+
+                <!-- 用户名称 -->
+
+                <TextView
+                    android:id="@+id/txt_wb_detail_uname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- 新浪认证 -->
+
+                <ImageView
+                    android:id="@+id/img_wb_detail_V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/avatar_vip"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_wb_detail_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/avatar_grassroot"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_detail_name"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/img_wb_detail_head"
+                android:orientation="horizontal" >
+
+                <!-- 发布时间 -->
+
+                <TextView
+                    android:id="@+id/txt_wb_detail_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_wb_detail_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#8C8C8C"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_devide"
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@id/rl_wb_detail_head"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+
+    <!-- 微博正文内容 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_wb_detail"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 微博正文内容 -->
+
+            <TextView
+                android:id="@+id/txt_wb_detail_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#454545"
+                android:textSize="16sp" />
+
+            <GridLayout
+                android:id="@+id/detail_content_pic_multi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:clickable="false"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:rowCount="3"
+                android:useDefaultMargins="false"
+                android:visibility="gone" >
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+
+                <ImageView style="@style/listViewDetailMultiImageView" />
+            </GridLayout>
+
+            <ImageView
+                android:id="@+id/img_wb_detail_content_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:maxWidth="350px"
+                android:maxHeight="400px"
+                android:layout_marginTop="3dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/default_pic"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 微博转发内容 -->
+
+        <LinearLayout
+            android:id="@+id/lyt_wb_detail_sublayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/popup"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <!-- 微博转发内容 -->
+
+            <TextView
+                android:id="@+id/txt_wb_detail_subcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#454545"
+                android:textSize="16sp" />
+
+            <GridLayout
+                android:id="@+id/detail_sub_pic_multi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="2dp"
+                android:clickable="false"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:rowCount="3"
+                android:useDefaultMargins="false"
+                android:visibility="gone" >
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+
+                <ImageView style="@style/listViewDetailRetweetMultiImageView" />
+            </GridLayout>
+
+            <ImageView
+                android:id="@+id/img_wb_detail_content_subpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:maxWidth="300px"
+                android:maxHeight="300px"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/default_pic"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rl_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/ll_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_wb_detail_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:clickable="true"
+                        android:textColor="#8C8C8C"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/img_wb_detail_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/show_info_tab" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/ll_comment"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_wb_detail_redirect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:clickable="true"
+                        android:textColor="#8C8C8C"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/img_wb_detail_redirect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/show_info_tab"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.8dp"
+                android:layout_below="@id/rl_comment"
+                android:background="#DBDBDB" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

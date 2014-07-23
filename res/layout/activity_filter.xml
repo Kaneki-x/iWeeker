@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/image_rl_actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/actionbar_bg" >
+
+        <RelativeLayout
+            android:id="@+id/image_rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/image_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/activity_back" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/image_btn_back"
+                android:background="@drawable/logo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/image_sned_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/image_rl_back"
+            android:text="图片处理"
+            android:textColor="#200000"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/image_send_separate"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/image_sned_tv"
+            android:background="@drawable/button_separate" />
+
+        <RelativeLayout
+            android:id="@+id/image_send_rl_wb_send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/image_send_separate" >
+
+            <ImageView
+                android:id="@+id/image_send_iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/send_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/image_send_iv_send"
+                android:text="保存"
+                android:textColor="#200000"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Gallery
+        android:id="@+id/galleryFilter"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:spacing="5dp" />
+
+    <ImageView
+        android:id="@+id/imgfilter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_rl_actionbar"
+        android:layout_above="@id/galleryFilter"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:clickable="false"
+        android:focusable="false" />
+
+</RelativeLayout>

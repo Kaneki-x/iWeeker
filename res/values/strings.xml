@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iWeeker</string>
+    <string name="action_settings">Settings</string>
+    <string name="login">登录新浪微博</string>
+    <string name="message">提及</string>
+    <string name="write">写微博</string>
+    <string name="send">发送</string>
+    <string name="send_hint">有什么新鲜事？</string>
+    <string name="detail">微博详情</string>
+    <string name="edit_hint">撰写评论</string>
+    <string name="logining">正在获取数据…</string>
+    <string name="net_work">网络连接存在问题，请稍候再试…</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载…</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <item name="tag_first" type="id"></item>
+    <item name="tag_second" type="id"></item>
+
+    <!-- drawer menu -->
+    <string name="home">首页</string>
+    <string name="profile">个人资料</string>
+    <string name="logout">注销</string>
+    <string name="main_detail">正文</string>
+    <string name="weibo">微博</string>
+
+</resources>

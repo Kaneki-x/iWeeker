@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Button
+        android:id="@+id/btn_main"
+        style="@style/drawerMenuButton"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:drawableLeft="@drawable/ic_menu_home"
+        android:text="@string/home" />
+
+    <Button
+        android:id="@+id/btn_message"
+        style="@style/drawerMenuButton"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:drawableLeft="@drawable/repost_light"
+        android:text="提及" />
+
+    <!--<Button
+        style="@style/drawerMenuButton"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:drawableLeft="@drawable/comment_light"
+        android:text="评论" />  -->
+
+    <Button
+        android:id="@+id/btn_favourite"
+        style="@style/drawerMenuButton"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:drawableLeft="@drawable/ic_menu_fav"
+        android:text="收藏" />
+
+    <Button
+        android:id="@+id/btn_profile"
+        style="@style/drawerMenuButton"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:drawableLeft="@drawable/ic_menu_profile"
+        android:text="@string/profile" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        style="@style/drawerMenuButton"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:drawableLeft="@drawable/ic_menu_logout"
+        android:text="@string/logout" />
+
+    <Button
+        android:id="@+id/btn_setting"
+        style="@style/drawerMenuButton"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:drawableLeft="@drawable/ic_menu_settings"
+        android:text="设置" />
+
+</merge>

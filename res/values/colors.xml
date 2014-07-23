@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="gallery_selected">#33ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="backgroud">#808080</color>
+    <color name="gold">#b89766</color>
+    <color name="gray">#666666</color>
+    <color name="red">#ff0020</color>
+    <color name="light_gray">#EBEBEB</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="list_unselected">#fff5f6f7</color>
+    <color name="list_selected">#ffe3e3e3</color>
+    <color name="lightpink">#EE2C2C</color>
+
+</resources>

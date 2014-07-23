@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="62.0dip"
+    android:orientation="vertical" >
+
+    <com.bobo.iweeker.UI.RoundImageView
+        android:id="@+id/mention_item_iv_avatar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="12.0dip"
+        android:layout_marginTop="12.0dip"
+        android:padding="4dp"
+        android:background="@drawable/profile_avatar_bg"
+        android:src="@drawable/default_avatar" />
+
+    <ImageView
+        android:id="@+id/mention_item_iv_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/newtag" />
+
+    <TextView
+        android:id="@+id/mention_item_tv_like"
+        android:layout_width="65.0dip"
+        android:layout_height="25.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16.0dip"
+        android:background="@drawable/follow_him_selector"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#ffffffff"
+        android:textSize="12.0sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/mention_item_tv_like"
+        android:layout_toRightOf="@id/mention_item_iv_avatar" >
+
+        <TextView
+            android:id="@+id/mention_item_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="姓名Name"
+            android:textColor="#ff242424"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/mention_item_iv_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_toRightOf="@id/mention_item_tv_name"
+            android:src="@drawable/avatar_vip" />
+
+        <TextView
+            android:id="@+id/mention_item_tv_summery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mention_item_tv_name"
+            android:layout_marginTop="2.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="注释summery"
+            android:textColor="#ff909090"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#DBDBDB" />
+
+</RelativeLayout>

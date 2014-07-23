@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/rl_action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/actionbar_bg" >
+
+        <RelativeLayout
+            android:id="@+id/rl_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+            <RelativeLayout
+                android:id="@+id/title_rl_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp" >
+
+                <TextView
+                    android:id="@+id/title_tv_tip"
+                    android:layout_width="8dp"
+                    android:layout_height="2dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/backgroud" />
+
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/title_tv_tip"
+                    android:background="@color/backgroud" />
+
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="2dp"
+                    android:layout_above="@id/title_tv_tip"
+                    android:background="@color/backgroud" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/title_rl_tip"
+                android:background="@drawable/logo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_tv_main"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rl_menu"
+            android:background="@drawable/spinner_group"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="2dp"
+            android:textColor="#200000"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/title_tv_main_write"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/actionbar_btn_bg"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/navigationbar_compose" />
+    </RelativeLayout>
+
+    <com.bobo.iweeker.UI.XListView
+        android:id="@+id/xlv_home"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_action_bar"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:listSelector="@drawable/home_list_bg" />
+
+    <ImageView
+        android:id="@+id/pg_load_weibo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_large" />
+
+</RelativeLayout>

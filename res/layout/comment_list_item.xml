@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="8dp" >
+
+            <com.bobo.iweeker.UI.RoundImageView
+                android:id="@+id/comment_img_wb_item_head"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:src="@drawable/default_avatar" />
+        </RelativeLayout>
+
+        <!-- 右边框架 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+            <!-- 用户名称、新浪认证部分 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <!-- 用户名称 -->
+
+                <TextView
+                    android:id="@+id/comment_txt_wb_item_uname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- 新浪认证 -->
+
+                <ImageView
+                    android:id="@+id/comment_img_wb_item_V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/avatar_vip"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/comment_img_wb_item_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/avatar_grassroot"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" >
+
+                    <!-- 发布时间 -->
+
+                    <TextView
+                        android:id="@+id/comment_txt_wb_item_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/red"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 微博正文内容 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical" >
+
+                <!-- 微博正文内容 -->
+
+                <TextView
+                    android:id="@+id/comment_txt_wb_item_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="#454545"
+                    android:textSize="16sp" /> 
+            </LinearLayout>
+
+            <!-- 内容 -->
+
+            <LinearLayout
+                android:id="@+id/comment_lyt_wb_item_sublayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/commentlist_bg"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <!-- 微博转发内容 -->
+
+                <TextView
+                    android:id="@+id/comment_txt_wb_item_subcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="#454545"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- 微博来源部分 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="3dp" >
+                
+                <ImageView 
+                    android:id="@+id/comment_iv_message_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingRight="3dp"
+                    android:background="@drawable/reply_btn_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="回复"
+                    android:layout_gravity="center"
+                    android:paddingRight="20dp"
+                    android:textColor="#8C8C8C"
+                    android:textSize="14sp" />
+                
+                <ImageView 
+                    android:id="@+id/comment_iv_message_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingRight="3dp"
+                    android:background="@drawable/delete_btn_bg"/>
+
+                <TextView
+                    android:id="@+id/comment_tv_message_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="删除"
+                    android:layout_gravity="center"
+                    android:textColor="#8C8C8C"
+                    android:textSize="14sp" />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#DBDBDB" />
+
+</LinearLayout>

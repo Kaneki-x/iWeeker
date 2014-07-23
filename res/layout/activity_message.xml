@@ -1,0 +1,181 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/actionbar_bg" >
+
+        <RelativeLayout
+            android:id="@+id/message_rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/message_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/activity_back" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/message_btn_back"
+                android:background="@drawable/logo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/message_tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/message_rl_back"
+            android:text="@string/message"
+            android:textColor="#200000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:background="#00000000"
+        android:divider="@drawable/message_tab_v_line"
+        android:orientation="horizontal"
+        android:showDividers="middle" >
+
+        <RelativeLayout
+            android:id="@+id/message_comment_tab"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/message_tab_layout_selector"
+            android:clickable="true" >
+
+            <LinearLayout
+                android:id="@+id/message_comment_tab_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="9.0dip" >
+
+                <ImageView
+                    android:id="@+id/message_comment_tab_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/message_tab_comment_selector" />
+
+                <TextView
+                    android:id="@+id/message_comment_tab_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.0dip"
+                    android:gravity="center"
+                    android:text="提及我的评论"
+                    android:textColor="#ffdd3737"
+                    android:textSize="14.0sp" />
+
+                <ImageView
+                    android:id="@+id/message_comment_tab_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:src="@drawable/message_group_icon_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3.0dip"
+                android:layout_toRightOf="@id/message_comment_tab_2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="9.0dip" >
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/message_mention_tab"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/message_tab_layout_selector"
+            android:clickable="true" >
+
+            <LinearLayout
+                android:id="@+id/message_mention_tab_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="9.0dip" >
+
+                <ImageView
+                    android:id="@+id/message_mention_tab_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/message_tab_mention_selector" />
+
+                <TextView
+                    android:id="@+id/message_mention_tab_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.0dip"
+                    android:gravity="center"
+                    android:text="提及我的微博"
+                    android:textColor="#ff838181"
+                    android:textSize="14.0sp" />
+
+                <ImageView
+                    android:id="@+id/message_mention_tab_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:src="@drawable/message_group_icon_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3.0dip"
+                android:layout_toRightOf="@id/message_mention_tab_2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="9.0dip" >
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <com.bobo.iweeker.UI.XListView
+            android:id="@+id/xlv_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:listSelector="@drawable/home_list_bg" />
+
+        <ImageView
+            android:id="@+id/message_pg_load_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_large" />
+    </RelativeLayout>
+
+</LinearLayout>

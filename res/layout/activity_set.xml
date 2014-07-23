@@ -1,0 +1,297 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/actionbar_bg" >
+
+        <RelativeLayout
+            android:id="@+id/set_rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+            <ImageView
+                android:id="@+id/set_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/activity_back" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/set_btn_back"
+                android:background="@drawable/logo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/set_tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/set_rl_back"
+            android:text="设置"
+            android:textColor="#200000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="23dp"
+        android:text="常规设置"
+        android:textColor="#CD0000" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#CD0000" />
+
+    <RelativeLayout
+        android:id="@+id/set_rl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/set_tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:text="进入自动刷新"
+            android:textColor="#4D4D4D"
+            android:textSize="15sp" />
+
+        <CheckBox
+            style="@style/mycheckboxstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@id/set_tv_refresh"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/set_tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:text="通知提醒"
+            android:textColor="#4D4D4D"
+            android:textSize="15sp" />
+
+        <CheckBox
+            style="@style/myswitchstyle"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@id/set_tv_refresh"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/set_rl_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/set_tv_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="字体大小设置"
+            android:textColor="#4D4D4D"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/set_tv_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/set_tv_font"
+            android:text="普通"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@id/set_tv_font_size"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/set_rl_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/set_tv_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="清空缓存"
+            android:textColor="#4D4D4D"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/set_tv_cache_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/set_tv_cache"
+            android:text="/storage/sdcard0/iWeeker/cache/"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@id/set_tv_cache_path"
+            android:visibility="invisible"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+    
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="23dp"
+        android:text="图片设置"
+        android:textColor="#CD0000" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#CD0000" />
+    
+    <RelativeLayout
+        android:id="@+id/set_rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/set_tv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="微博图片显示模式"
+            android:textColor="#4D4D4D"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/set_tv_image_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/set_tv_image"
+            android:text="中图"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@id/set_tv_image_model"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/set_rl_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" >
+
+        <TextView
+            android:id="@+id/set_tv_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="下载图片质量"
+            android:textColor="#4D4D4D"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/set_tv_down_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/set_tv_down"
+            android:text="中图"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@id/set_tv_down_model"
+            android:background="#DBDBDB" />
+    </RelativeLayout>
+
+</LinearLayout>
